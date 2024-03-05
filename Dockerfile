@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 ARG OPENTTD_VERSION
 ARG GFX_VERSION
-ENV args=-D
+ENV args='-D -c /config/openttd.cfg'
 
 RUN apt-get update && apt-get install -y \
     wget \
