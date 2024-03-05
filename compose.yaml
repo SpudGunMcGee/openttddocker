@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  openttdsever:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      args:
+          OPENTTD_VERSION: 14.0-RC1
+          GFX_VERSION: 7.1
+
+    ports: 
+      - "3977:3977/tcp"
+      - "3979:3979/tcp"
+      - "3979:3979/udp"
+    volumes:
+      - ./config:/config
