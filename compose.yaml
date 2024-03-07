@@ -7,7 +7,7 @@ services:
       args:
           OPENTTD_VERSION: 14.0-RC1
           GFX_VERSION: 7.1
-
+    user: openttd
     ports: 
       - "3977:3977/tcp"
       - "3979:3979/tcp"
